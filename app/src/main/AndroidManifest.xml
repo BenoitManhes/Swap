@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.studiobeu.swapprototype">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icone_swap"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icone_swap_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".controller.MainActivity">
+            android:name=".Controller.GameActivity"
+            android:screenOrientation="portrait"
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.GenererQrCode" />
+        <activity android:name=".controller.QrScan" />
+        <activity android:name=".controller.ProfilActivity" />
+        <activity android:name=".controller.MyProfilAcvtivity"></activity>
+    </application>
+
+</manifest>

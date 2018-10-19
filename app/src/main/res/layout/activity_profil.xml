@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/editName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/photo_profil"/>
+
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:hint="Name"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:focusedByDefault="false"
+        android:background="@drawable/border"
+        android:textColor="@color/violetSwap"
+        android:inputType="textPersonName" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/editName"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:clipChildren="false" />
+
+</RelativeLayout>

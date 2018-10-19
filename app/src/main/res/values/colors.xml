@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="violetSwap">#4503ae</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="violetSwapClair">#8b74b5</color>
+
+
+    //couleur ajoute pour generer le qrcode
+    <color name="black">#4503ae</color>
+    <color name="white">#ffffff</color>
+</resources>
