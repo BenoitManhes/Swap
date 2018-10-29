@@ -11,9 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.studiobeu.swapprototype.model.Contact;
 import com.studiobeu.swapprototype.model.Parametre;
-import com.studiobeu.swapprototype.model.Profil;
 
 import com.studiobeu.swapprototype.R;
 import com.studiobeu.swapprototype.model.Reseau;
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements
     // detecteur de gestes
     private GestureDetectorCompat mDetector;
 
-    public static Profil mProfil;
+    public static com.studiobeu.swapprototype.model.Profil mProfil;
     private SharedPreferences mPreferences;
 
     public static final String KEY_PROFIL = "profil";
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements
         mPreferences = getPreferences(MODE_PRIVATE);
 
         /*On charge le profil si il existe*/
-        mProfil = new Profil();
+        mProfil = new com.studiobeu.swapprototype.model.Profil();
         greetProfil();
     }
 
@@ -117,17 +115,17 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     public void onClickQRcode(View view){
-        Intent intent = new Intent(MainActivity.this, GenererQrCode.class);
+        Intent intent = new Intent(MainActivity.this, QRGenerator.class);
         startActivity(intent);
     }
 
     public void onClickScan(View view){
-        Intent intent = new Intent(MainActivity.this, QrScan.class);
+        Intent intent = new Intent(MainActivity.this, QRScan.class);
         startActivity(intent);
     }
 
     public  void onClickProfil(View view){
-        Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
+        Intent intent = new Intent(MainActivity.this, Profil.class);
         startActivity(intent);
     }
 
@@ -140,19 +138,19 @@ public class MainActivity extends AppCompatActivity implements
         if( Math.abs(velocityX) > Math.abs(velocityY) ){
             if(velocityX>0) {
                 geste = "Droite";
-                Intent intent = new Intent(MainActivity.this, QrScan.class);
+                Intent intent = new Intent(MainActivity.this, QRScan.class);
                 startActivity(intent);
 
             }
             else {
-                Intent intent = new Intent(MainActivity.this, GenererQrCode.class);
+                Intent intent = new Intent(MainActivity.this, QRGenerator.class);
                 startActivity(intent);
                 geste = "Gauche";
             }
         }else{
             if(velocityY>0){
                 geste = "Bas";
-                Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
+                Intent intent = new Intent(MainActivity.this, Profil.class);
                 startActivity(intent);
             }
             else geste = "Haut";

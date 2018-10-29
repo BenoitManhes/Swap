@@ -10,18 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".controller.MainActivity">
-            android:name=".Controller.GameActivity"
-            android:screenOrientation="portrait"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.GenererQrCode" />
-        <activity android:name=".controller.QrScan" />
-        <activity android:name=".controller.ProfilActivity" />
-        <activity android:name=".controller.MyProfilAcvtivity"></activity>
+        <activity android:name=".controller.QRGenerator" />
+        <activity android:name=".controller.QRScan" />
+        <activity android:name=".controller.Profil" />
+        <activity android:name=".controller.MyProfile"></activity>
     </application>
 
 </manifest>
